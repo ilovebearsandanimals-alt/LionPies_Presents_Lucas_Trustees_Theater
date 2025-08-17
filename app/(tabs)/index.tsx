@@ -80,22 +80,6 @@ export default function MoviesScreen() {
       </LinearGradient>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-        <View style={styles.searchContainer}>
-          <View style={styles.searchInputContainer}>
-            <Search size={20} color="#64748B" strokeWidth={2} />
-            <TextInput
-              style={styles.searchInput}
-              placeholder="Search movies..."
-              placeholderTextColor="#94A3B8"
-              value={searchQuery}
-              onChangeText={setSearchQuery}
-            />
-          </View>
-          <TouchableOpacity style={styles.filterButton}>
-            <Filter size={20} color="#F59E0B" strokeWidth={2} />
-          </TouchableOpacity>
-        </View>
-
         <ScrollView 
           horizontal 
           showsHorizontalScrollIndicator={false}
@@ -165,6 +149,22 @@ export default function MoviesScreen() {
           </View>
         </View>
       </ScrollView>
+
+      <View style={styles.searchContainer}>
+        <View style={styles.searchInputContainer}>
+          <Search size={20} color="#64748B" strokeWidth={2} />
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search movies..."
+            placeholderTextColor="#94A3B8"
+            value={searchQuery}
+            onChangeText={setSearchQuery}
+          />
+        </View>
+        <TouchableOpacity style={styles.filterButton}>
+          <Filter size={20} color="#F59E0B" strokeWidth={2} />
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
@@ -202,8 +202,10 @@ const styles = StyleSheet.create({
   searchContainer: {
     flexDirection: 'row',
     paddingHorizontal: 24,
-    paddingTop: 24,
-    paddingBottom: 16,
+    paddingVertical: 16,
+    backgroundColor: '#0F172A',
+    borderTopWidth: 1,
+    borderTopColor: '#334155',
     gap: 12,
   },
   searchInputContainer: {
