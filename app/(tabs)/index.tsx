@@ -60,7 +60,6 @@ const mockMovies: Movie[] = [
 export default function MoviesScreen() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Now Playing');
-  const isCollapsed = false;
 
   const categories = ['Now Playing', 'Coming Soon', 'Special Events'];
 
@@ -69,7 +68,7 @@ export default function MoviesScreen() {
   );
 
   return (
-    <SafeAreaView style={styles.container} data-collapsable={isCollapsed}>
+    <SafeAreaView style={styles.container}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}

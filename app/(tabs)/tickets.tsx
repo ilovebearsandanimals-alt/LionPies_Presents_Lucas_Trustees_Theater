@@ -57,7 +57,6 @@ const mockTickets: TicketBooking[] = [
 
 export default function TicketsScreen() {
   const [selectedTab, setSelectedTab] = useState('upcoming');
-  const isCollapsed = false;
 
   const tabs = [
     { id: 'upcoming', label: 'Upcoming' },
@@ -83,7 +82,7 @@ export default function TicketsScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container} data-collapsable={isCollapsed}>
+    <SafeAreaView style={styles.container}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}

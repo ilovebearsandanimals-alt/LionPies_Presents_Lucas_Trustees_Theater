@@ -57,8 +57,6 @@ const mockFestivals: Festival[] = [
 ];
 
 export default function FestivalsScreen() {
-  const isCollapsed = false;
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'upcoming': return '#F59E0B';
@@ -78,7 +76,7 @@ export default function FestivalsScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container} data-collapsable={isCollapsed}>
+    <SafeAreaView style={styles.container}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
