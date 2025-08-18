@@ -34,6 +34,7 @@ export default function ProfileScreen() {
     { id: 'logout', label: 'Sign Out', icon: LogOut, action: () => {}, danger: true },
   ];
 const safeAreaProps = Platform.OS !== 'web' ? { collapsable: false } : {};
+const safeAreaProps = Platform.OS !== 'web' ? { collapsable: false } : { collapsable: undefined };
   return (
     <SafeAreaView style={styles.container} {...safeAreaProps}>
       <LinearGradient

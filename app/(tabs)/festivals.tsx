@@ -76,6 +76,7 @@ export default function FestivalsScreen() {
   };
 
 const safeAreaProps = Platform.OS !== 'web' ? { collapsable: false } : {};
+const safeAreaProps = Platform.OS !== 'web' ? { collapsable: false } : { collapsable: undefined };
   
   return (
     <SafeAreaView style={styles.container} {...safeAreaProps}>
