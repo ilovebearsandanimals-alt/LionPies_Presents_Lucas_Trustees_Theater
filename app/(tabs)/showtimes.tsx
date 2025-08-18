@@ -67,13 +67,12 @@ export default function ShowtimesScreen() {
         <Text style={styles.headerSubtitle}>Plan your perfect movie night</Text>
       </LinearGradient>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false} collapsable={Platform.OS === 'web' ? undefined : false}>
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <ScrollView 
           horizontal 
           showsHorizontalScrollIndicator={false}
           style={styles.datesContainer}
           contentContainerStyle={styles.datesContent}
-          collapsable={Platform.OS === 'web' ? undefined : false}
         >
           {dates.map((date) => (
             <TouchableOpacity
