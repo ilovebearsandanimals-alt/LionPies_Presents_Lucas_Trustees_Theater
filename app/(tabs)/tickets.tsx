@@ -82,7 +82,7 @@ export default function TicketsScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container} collapsable={false}>
+    <SafeAreaView style={styles.container} collapsable={'false'}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
