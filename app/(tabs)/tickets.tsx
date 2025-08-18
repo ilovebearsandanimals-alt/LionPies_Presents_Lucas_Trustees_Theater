@@ -113,7 +113,6 @@ export default function TicketsScreen() {
         ))}
       </View>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false} collapsable={Platform.OS === 'web' ? undefined : false}>
         <View style={styles.ticketsContainer}>
           {mockTickets.map((ticket) => (
