@@ -13,6 +13,7 @@ import { Calendar, MapPin, Users, Award, ExternalLink } from 'lucide-react-nativ
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
 import { CleanScrollView } from '@/components/CleanScrollView';
+import { CleanTouchableOpacity } from '@/components/CleanTouchableOpacity';
 
 interface Festival {
   id: string;
@@ -93,7 +94,7 @@ export default function FestivalsScreen() {
       <CleanScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.festivalsContainer}>
           {mockFestivals.map((festival) => (
-            <TouchableOpacity key={festival.id} style={styles.festivalCard}>
+            <CleanTouchableOpacity key={festival.id} style={styles.festivalCard}>
               <View style={styles.festivalImageContainer}>
                 <Image source={{ uri: festival.image }} style={styles.festivalImage} />
                 <LinearGradient
@@ -126,18 +127,18 @@ export default function FestivalsScreen() {
                   </View>
                 </View>
 
-                <TouchableOpacity style={styles.learnMoreButton}>
+                <CleanTouchableOpacity style={styles.learnMoreButton}>
                   <Text style={styles.learnMoreText}>Learn More</Text>
                   <ExternalLink size={16} color="#FFFFFF" strokeWidth={2} />
-                </TouchableOpacity>
+                </CleanTouchableOpacity>
               </View>
-            </TouchableOpacity>
+            </CleanTouchableOpacity>
           ))}
         </View>
 
         <View style={styles.upcomingSection}>
           <Text style={styles.sectionTitle}>What's Next</Text>
-          <View style={styles.upcomingCard}>
+          <CleanTouchableOpacity style={styles.upcomingCard}>
             <Award size={24} color="#F59E0B" strokeWidth={2} />
             <View style={styles.upcomingContent}>
               <Text style={styles.upcomingTitle}>Awards Season Showcase</Text>
@@ -146,7 +147,7 @@ export default function FestivalsScreen() {
               </Text>
               <Text style={styles.upcomingDate}>Coming March 2025</Text>
             </View>
-          </View>
+          </CleanTouchableOpacity>
         </View>
       </CleanScrollView>
       </CleanView>

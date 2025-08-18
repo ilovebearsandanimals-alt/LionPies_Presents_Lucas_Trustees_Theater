@@ -12,6 +12,7 @@ import { MapPin, Clock, ChevronRight, Calendar } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
 import { CleanScrollView } from '@/components/CleanScrollView';
+import { CleanTouchableOpacity } from '@/components/CleanTouchableOpacity';
 
 interface Showtime {
   id: string;
@@ -78,7 +79,7 @@ export default function ShowtimesScreen() {
           contentContainerStyle={styles.datesContent}
         >
           {dates.map((date) => (
-            <TouchableOpacity
+            <CleanTouchableOpacity
               key={date}
               style={[
                 styles.dateButton,
@@ -93,7 +94,7 @@ export default function ShowtimesScreen() {
               ]}>
                 {date}
               </Text>
-            </TouchableOpacity>
+            </CleanTouchableOpacity>
           ))}
         </CleanScrollView>
 
@@ -115,11 +116,11 @@ export default function ShowtimesScreen() {
                 <Text style={styles.timesLabel}>Showtimes</Text>
                 <View style={styles.timeButtons}>
                   {showtime.times.map((time, index) => (
-                    <TouchableOpacity key={index} style={styles.timeButton}>
+                    <CleanTouchableOpacity key={index} style={styles.timeButton}>
                       <Clock size={14} color="#64748B" strokeWidth={2} />
                       <Text style={styles.timeText}>{time}</Text>
                       <ChevronRight size={14} color="#64748B" strokeWidth={2} />
-                    </TouchableOpacity>
+                    </CleanTouchableOpacity>
                   ))}
                 </View>
               </View>

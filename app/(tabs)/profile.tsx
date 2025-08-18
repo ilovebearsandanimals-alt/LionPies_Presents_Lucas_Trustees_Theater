@@ -24,6 +24,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
 import { CleanScrollView } from '@/components/CleanScrollView';
+import { CleanTouchableOpacity } from '@/components/CleanTouchableOpacity';
 
 export default function ProfileScreen() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
@@ -118,7 +119,7 @@ export default function ProfileScreen() {
         <View style={styles.menuCard}>
           <Text style={styles.sectionTitle}>Account</Text>
           {menuItems.map((item) => (
-            <TouchableOpacity
+            <CleanTouchableOpacity
               key={item.id}
               style={styles.menuItem}
               onPress={item.action}
@@ -141,7 +142,7 @@ export default function ProfileScreen() {
                 color={item.danger ? '#EF4444' : '#64748B'} 
                 strokeWidth={2} 
               />
-            </TouchableOpacity>
+            </CleanTouchableOpacity>
           ))}
         </View>
 

@@ -12,6 +12,7 @@ import { Ticket, Calendar, MapPin, Clock, QrCode, Download } from 'lucide-react-
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
 import { CleanScrollView } from '@/components/CleanScrollView';
+import { CleanTouchableOpacity } from '@/components/CleanTouchableOpacity';
 
 interface TicketBooking {
   id: string;
@@ -98,7 +99,7 @@ export default function TicketsScreen() {
 
       <View style={styles.tabsContainer}>
         {tabs.map((tab) => (
-          <TouchableOpacity
+          <CleanTouchableOpacity
             key={tab.id}
             style={[
               styles.tabButton,
@@ -112,7 +113,7 @@ export default function TicketsScreen() {
             ]}>
               {tab.label}
             </Text>
-          </TouchableOpacity>
+          </CleanTouchableOpacity>
         ))}
       </View>
 
@@ -174,13 +175,13 @@ export default function TicketsScreen() {
                 </View>
 
                 <View style={styles.ticketActions}>
-                  <TouchableOpacity style={styles.qrButton}>
+                  <CleanTouchableOpacity style={styles.qrButton}>
                     <QrCode size={20} color="#FFFFFF" strokeWidth={2} />
                     <Text style={styles.qrButtonText}>Show QR Code</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.downloadButton}>
+                  </CleanTouchableOpacity>
+                  <CleanTouchableOpacity style={styles.downloadButton}>
                     <Download size={18} color="#F59E0B" strokeWidth={2} />
-                  </TouchableOpacity>
+                  </CleanTouchableOpacity>
                 </View>
               </View>
             </View>

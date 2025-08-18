@@ -14,6 +14,7 @@ import { Search, Filter, ChevronRight, Clock, Star } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
 import { CleanScrollView } from '@/components/CleanScrollView';
+import { CleanTouchableOpacity } from '@/components/CleanTouchableOpacity';
 
 interface Movie {
   id: string;
@@ -90,7 +91,7 @@ export default function MoviesScreen() {
           contentContainerStyle={styles.categoriesContent}
         >
           {categories.map((category) => (
-            <TouchableOpacity
+            <CleanTouchableOpacity
               key={category}
               style={[
                 styles.categoryButton,
@@ -104,13 +105,13 @@ export default function MoviesScreen() {
               ]}>
                 {category}
               </Text>
-            </TouchableOpacity>
+            </CleanTouchableOpacity>
           ))}
         </CleanScrollView>
 
         <View style={styles.moviesGrid}>
           {filteredMovies.map((movie) => (
-            <TouchableOpacity key={movie.id} style={styles.movieCard}>
+            <CleanTouchableOpacity key={movie.id} style={styles.movieCard}>
               <View style={styles.moviePoster}>
                 <Image source={{ uri: movie.poster }} style={styles.posterImage} />
                 <LinearGradient
@@ -129,26 +130,26 @@ export default function MoviesScreen() {
                   <Clock size={14} color="#64748B" strokeWidth={2} />
                   <Text style={styles.movieDuration}>{movie.duration}</Text>
                 </View>
-                <TouchableOpacity style={styles.buyTicketButton}>
+                <CleanTouchableOpacity style={styles.buyTicketButton}>
                   <Text style={styles.buyTicketText}>Buy Tickets</Text>
                   <ChevronRight size={16} color="#FFFFFF" strokeWidth={2} />
-                </TouchableOpacity>
+                </CleanTouchableOpacity>
               </View>
-            </TouchableOpacity>
+            </CleanTouchableOpacity>
           ))}
         </View>
 
         <View style={styles.theaterInfo}>
           <Text style={styles.sectionTitle}>Our Theaters</Text>
           <View style={styles.theaterCards}>
-            <TouchableOpacity style={styles.theaterCard}>
+            <CleanTouchableOpacity style={styles.theaterCard}>
               <Text style={styles.theaterName}>Trustees Theater</Text>
               <Text style={styles.theaterAddress}>216 E Broughton St, Savannah, GA</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.theaterCard}>
+            </CleanTouchableOpacity>
+            <CleanTouchableOpacity style={styles.theaterCard}>
               <Text style={styles.theaterName}>Lucas Theatre For the Arts</Text>
               <Text style={styles.theaterAddress}>32 Abercorn St, Savannah, GA</Text>
-            </TouchableOpacity>
+            </CleanTouchableOpacity>
           </View>
         </View>
       </CleanScrollView>
@@ -164,9 +165,9 @@ export default function MoviesScreen() {
             onChangeText={setSearchQuery}
           />
         </View>
-        <TouchableOpacity style={styles.filterButton}>
+        <CleanTouchableOpacity style={styles.filterButton}>
           <Filter size={20} color="#F59E0B" strokeWidth={2} />
-        </TouchableOpacity>
+        </CleanTouchableOpacity>
       </View>
       </CleanView>
     </SafeAreaView>
