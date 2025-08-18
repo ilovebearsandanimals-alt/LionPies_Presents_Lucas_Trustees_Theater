@@ -195,7 +195,6 @@ export default function TicketsScreen() {
         )}
       </ScrollView>
     </SafeAreaView>
-    </SafeAreaView>
   );
 }
 
