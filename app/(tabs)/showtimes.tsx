@@ -67,7 +67,6 @@ export default function ShowtimesScreen() {
         <Text style={styles.headerSubtitle}>Plan your perfect movie night</Text>
       </LinearGradient>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false} collapsable={Platform.OS === 'web' ? undefined : false}>
         <ScrollView 
           horizontal 
