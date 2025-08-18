@@ -75,8 +75,8 @@ export default function FestivalsScreen() {
     }
   };
 
-  const safeAreaProps = Platform.OS !== 'web' ? { collapsable: false } : {};
-
+const safeAreaProps = Platform.OS !== 'web' ? {} : { collapsable: false };
+  
   return (
     <SafeAreaView style={styles.container} {...safeAreaProps}>
       <LinearGradient
