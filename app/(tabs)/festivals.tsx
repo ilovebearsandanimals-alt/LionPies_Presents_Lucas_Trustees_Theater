@@ -87,7 +87,6 @@ export default function FestivalsScreen() {
         <Text style={styles.headerSubtitle}>Celebrate cinema with us</Text>
       </LinearGradient>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false} collapsable={Platform.OS === 'web' ? undefined : false}>
         <View style={styles.festivalsContainer}>
           {mockFestivals.map((festival) => (

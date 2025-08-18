@@ -60,7 +60,6 @@ export default function ProfileScreen() {
         </View>
       </LinearGradient>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false} collapsable={Platform.OS === 'web' ? undefined : false}>
         <View style={styles.userInfoCard}>
           <Text style={styles.sectionTitle}>Contact Information</Text>
