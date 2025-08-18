@@ -12,6 +12,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Calendar, MapPin, Users, Award, ExternalLink } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
+import { CleanScrollView } from '@/components/CleanScrollView';
 
 interface Festival {
   id: string;
@@ -89,7 +90,7 @@ export default function FestivalsScreen() {
         <Text style={styles.headerSubtitle}>Celebrate cinema with us</Text>
       </LinearGradient>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      <CleanScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.festivalsContainer}>
           {mockFestivals.map((festival) => (
             <TouchableOpacity key={festival.id} style={styles.festivalCard}>
@@ -147,7 +148,7 @@ export default function FestivalsScreen() {
             </View>
           </View>
         </View>
-      </ScrollView>
+      </CleanScrollView>
       </CleanView>
     </SafeAreaView>
   );

@@ -23,6 +23,7 @@ import {
 } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
+import { CleanScrollView } from '@/components/CleanScrollView';
 
 export default function ProfileScreen() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
@@ -61,7 +62,7 @@ export default function ProfileScreen() {
         </View>
       </LinearGradient>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      <CleanScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.userInfoCard}>
           <Text style={styles.sectionTitle}>Contact Information</Text>
           <View style={styles.infoRow}>
@@ -161,7 +162,7 @@ export default function ProfileScreen() {
             </View>
           </View>
         </View>
-      </ScrollView>
+      </CleanScrollView>
       </CleanView>
     </SafeAreaView>
   );

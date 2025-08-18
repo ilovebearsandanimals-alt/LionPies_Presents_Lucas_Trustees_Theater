@@ -13,6 +13,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Search, Filter, ChevronRight, Clock, Star } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
+import { CleanScrollView } from '@/components/CleanScrollView';
 
 interface Movie {
   id: string;
@@ -81,8 +82,8 @@ export default function MoviesScreen() {
         <Text style={styles.headerSubtitle}>Discover Cinema</Text>
       </LinearGradient>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-        <ScrollView 
+      <CleanScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+        <CleanScrollView 
           horizontal 
           showsHorizontalScrollIndicator={false}
           style={styles.categoriesContainer}
@@ -105,7 +106,7 @@ export default function MoviesScreen() {
               </Text>
             </TouchableOpacity>
           ))}
-        </ScrollView>
+        </CleanScrollView>
 
         <View style={styles.moviesGrid}>
           {filteredMovies.map((movie) => (
@@ -150,7 +151,7 @@ export default function MoviesScreen() {
             </TouchableOpacity>
           </View>
         </View>
-      </ScrollView>
+      </CleanScrollView>
 
       <View style={styles.searchContainer}>
         <View style={styles.searchInputContainer}>

@@ -11,6 +11,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Ticket, Calendar, MapPin, Clock, QrCode, Download } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
+import { CleanScrollView } from '@/components/CleanScrollView';
 
 interface TicketBooking {
   id: string;
@@ -115,7 +116,7 @@ export default function TicketsScreen() {
         ))}
       </View>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      <CleanScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.ticketsContainer}>
           {mockTickets.map((ticket) => (
             <View key={ticket.id} style={styles.ticketCard}>
@@ -195,7 +196,7 @@ export default function TicketsScreen() {
             </Text>
           </View>
         )}
-      </ScrollView>
+      </CleanScrollView>
       </CleanView>
     </SafeAreaView>
   );
