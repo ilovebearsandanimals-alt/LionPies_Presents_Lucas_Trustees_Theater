@@ -26,6 +26,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 export default function ProfileScreen() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
   const [locationEnabled, setLocationEnabled] = useState(false);
+  const isCollapsed = false;
 
   const menuItems = [
     { id: 'payment', label: 'Payment Methods', icon: CreditCard, action: () => {} },
@@ -34,7 +35,7 @@ export default function ProfileScreen() {
     { id: 'logout', label: 'Sign Out', icon: LogOut, action: () => {}, danger: true },
   ];
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} data-collapsable={isCollapsed}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}

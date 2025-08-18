@@ -49,6 +49,7 @@ const mockShowtimes: Showtime[] = [
 
 export default function ShowtimesScreen() {
   const [selectedDate, setSelectedDate] = useState('Today');
+  const isCollapsed = false;
   const dates = ['Today', 'Tomorrow', 'Wednesday', 'Thursday', 'Friday'];
 
   const filteredShowtimes = mockShowtimes.filter(showtime => 
@@ -56,7 +57,7 @@ export default function ShowtimesScreen() {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} data-collapsable={isCollapsed}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
