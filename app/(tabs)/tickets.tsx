@@ -112,7 +112,6 @@ export default function TicketsScreen() {
           </TouchableOpacity>
         ))}
       </View>
-      </ScrollView>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false} collapsable={Platform.OS === 'web' ? undefined : false}>
         <View style={styles.ticketsContainer}>
@@ -195,6 +194,7 @@ export default function TicketsScreen() {
           </View>
         )}
       </ScrollView>
+    </SafeAreaView>
     </SafeAreaView>
   );
 }
