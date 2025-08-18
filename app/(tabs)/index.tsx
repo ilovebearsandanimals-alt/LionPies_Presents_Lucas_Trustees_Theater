@@ -79,7 +79,7 @@ export default function MoviesScreen() {
         <Text style={styles.headerSubtitle}>Discover Cinema</Text>
       </LinearGradient>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={'false'}>
         <ScrollView 
           horizontal 
           showsHorizontalScrollIndicator={false}
