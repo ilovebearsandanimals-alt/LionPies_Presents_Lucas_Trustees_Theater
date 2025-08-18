@@ -12,6 +12,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { Search, Filter, ChevronRight, Clock, Star } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { CleanView } from '@/components/CleanView';
 
 interface Movie {
   id: string;
@@ -68,7 +69,8 @@ export default function MoviesScreen() {
   );
 
   return (
-    <SafeAreaView style={styles.container} collapsable={undefined}>
+    <SafeAreaView style={styles.container}>
+      <CleanView style={{ flex: 1 }}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
@@ -165,6 +167,7 @@ export default function MoviesScreen() {
           <Filter size={20} color="#F59E0B" strokeWidth={2} />
         </TouchableOpacity>
       </View>
+      </CleanView>
     </SafeAreaView>
   );
 }

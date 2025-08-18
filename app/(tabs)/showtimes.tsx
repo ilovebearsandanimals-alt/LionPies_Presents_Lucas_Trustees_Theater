@@ -10,6 +10,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { MapPin, Clock, ChevronRight, Calendar } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { CleanView } from '@/components/CleanView';
 
 interface Showtime {
   id: string;
@@ -56,7 +57,8 @@ export default function ShowtimesScreen() {
   );
 
   return (
-    <SafeAreaView style={styles.container} collapsable={undefined}>
+    <SafeAreaView style={styles.container}>
+      <CleanView style={{ flex: 1 }}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
@@ -124,6 +126,7 @@ export default function ShowtimesScreen() {
           ))}
         </View>
       </ScrollView>
+      </CleanView>
     </SafeAreaView>
   );
 }

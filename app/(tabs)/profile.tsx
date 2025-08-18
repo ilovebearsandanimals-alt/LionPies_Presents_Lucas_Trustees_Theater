@@ -22,6 +22,7 @@ import {
   Star
 } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { CleanView } from '@/components/CleanView';
 
 export default function ProfileScreen() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
@@ -34,7 +35,8 @@ export default function ProfileScreen() {
     { id: 'logout', label: 'Sign Out', icon: LogOut, action: () => {}, danger: true },
   ];
   return (
-    <SafeAreaView style={styles.container} collapsable={undefined}>
+    <SafeAreaView style={styles.container}>
+      <CleanView style={{ flex: 1 }}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
@@ -160,6 +162,7 @@ export default function ProfileScreen() {
           </View>
         </View>
       </ScrollView>
+      </CleanView>
     </SafeAreaView>
   );
 }

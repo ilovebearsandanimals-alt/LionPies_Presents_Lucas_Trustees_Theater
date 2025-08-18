@@ -10,6 +10,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ticket, Calendar, MapPin, Clock, QrCode, Download } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { CleanView } from '@/components/CleanView';
 
 interface TicketBooking {
   id: string;
@@ -82,7 +83,8 @@ export default function TicketsScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container} collapsable={undefined}>
+    <SafeAreaView style={styles.container}>
+      <CleanView style={{ flex: 1 }}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
@@ -194,6 +196,7 @@ export default function TicketsScreen() {
           </View>
         )}
       </ScrollView>
+      </CleanView>
     </SafeAreaView>
   );
 }

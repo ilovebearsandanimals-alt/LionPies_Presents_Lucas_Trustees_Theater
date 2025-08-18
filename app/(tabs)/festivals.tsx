@@ -11,6 +11,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { Calendar, MapPin, Users, Award, ExternalLink } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { CleanView } from '@/components/CleanView';
 
 interface Festival {
   id: string;
@@ -76,7 +77,8 @@ export default function FestivalsScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container} collapsable={undefined}>
+    <SafeAreaView style={styles.container}>
+      <CleanView style={{ flex: 1 }}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
@@ -146,6 +148,7 @@ export default function FestivalsScreen() {
           </View>
         </View>
       </ScrollView>
+      </CleanView>
     </SafeAreaView>
   );
 }
