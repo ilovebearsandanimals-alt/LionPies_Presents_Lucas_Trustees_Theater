@@ -68,11 +68,13 @@ export default function ShowtimesScreen() {
       </LinearGradient>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={false} collapsable={Platform.OS === 'web' ? undefined : false}>
         <ScrollView 
           horizontal 
           showsHorizontalScrollIndicator={false}
           style={styles.datesContainer}
           contentContainerStyle={styles.datesContent}
+          collapsable={Platform.OS === 'web' ? undefined : false}
         >
           {dates.map((date) => (
             <TouchableOpacity

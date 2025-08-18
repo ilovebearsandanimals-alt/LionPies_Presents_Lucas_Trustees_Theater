@@ -88,6 +88,7 @@ export default function FestivalsScreen() {
       </LinearGradient>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={false} collapsable={Platform.OS === 'web' ? undefined : false}>
         <View style={styles.festivalsContainer}>
           {mockFestivals.map((festival) => (
             <TouchableOpacity key={festival.id} style={styles.festivalCard}>

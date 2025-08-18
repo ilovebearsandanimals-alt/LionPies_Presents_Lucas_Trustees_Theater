@@ -85,6 +85,7 @@ export default function MoviesScreen() {
           showsHorizontalScrollIndicator={false}
           style={styles.categoriesContainer}
           contentContainerStyle={styles.categoriesContent}
+          collapsable={Platform.OS === 'web' ? undefined : false}
         >
           {categories.map((category) => (
             <TouchableOpacity
