@@ -55,7 +55,7 @@ export default function ShowtimesScreen() {
     showtime.date === selectedDate
   );
 
-  const safeAreaProps = Platform.OS !== 'web' ? { collapsable: false } : {};
+  const safeAreaProps = Platform.OS !== 'web' ? { collapsable: false } : { collapsable: undefined };
 
   return (
     <SafeAreaView style={styles.container} {...safeAreaProps}>
