@@ -35,7 +35,7 @@ export default function ProfileScreen() {
   ];
 
   return (
-    <SafeAreaView style={styles.container} collapsable={false}>
+    <SafeAreaView style={styles.container}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
