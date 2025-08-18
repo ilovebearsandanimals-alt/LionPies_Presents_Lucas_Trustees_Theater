@@ -86,7 +86,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
   });
 
   return (
-    <View style={styles.container} collapsable={true}>
+    <View style={styles.container}>
       <LinearGradient
         colors={['#0F172A', '#1E293B', '#8B1538']}
         style={styles.gradient}
