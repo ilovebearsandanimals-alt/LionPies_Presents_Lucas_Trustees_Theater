@@ -67,7 +67,7 @@ export default function MoviesScreen() {
     movie.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-const safeAreaProps = Platform.OS !== 'web' ? {} : { collapsable: false };
+const safeAreaProps = Platform.OS !== 'web' ? { collapsable: false } : {};
   return (
     <SafeAreaView style={styles.container} {...safeAreaProps}>
       <LinearGradient
