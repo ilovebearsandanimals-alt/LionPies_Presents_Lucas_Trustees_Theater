@@ -33,9 +33,8 @@ export default function ProfileScreen() {
     { id: 'settings', label: 'App Settings', icon: Settings, action: () => {} },
     { id: 'logout', label: 'Sign Out', icon: LogOut, action: () => {}, danger: true },
   ];
-const safeAreaProps = Platform.OS !== 'web' ? { collapsable: false } : { collapsable: undefined };
   return (
-    <SafeAreaView style={styles.container} {...safeAreaProps}>
+    <SafeAreaView style={styles.container} data-collapsable={false}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}

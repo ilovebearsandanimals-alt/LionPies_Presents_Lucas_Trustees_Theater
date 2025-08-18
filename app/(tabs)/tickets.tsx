@@ -81,9 +81,8 @@ export default function TicketsScreen() {
     }
   };
 
-const safeAreaProps = Platform.OS !== 'web' ? { collapsable: false } : { collapsable: undefined };
   return (
-    <SafeAreaView style={styles.container} {...safeAreaProps}>
+    <SafeAreaView style={styles.container} data-collapsable={false}>
       <LinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
