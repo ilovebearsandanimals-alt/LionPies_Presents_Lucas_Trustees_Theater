@@ -27,7 +27,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
       Animated.timing(fadeAnim, {
         toValue: 1,
         duration: 800,
-        easing: Easing.out(Easing.cubic),
+        easing: (t) => t,
         useNativeDriver: true,
       }),
       Animated.spring(scaleAnim, {
@@ -43,7 +43,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
       Animated.timing(rotateAnim, {
         toValue: 1,
         duration: 8000,
-        easing: Easing.linear,
+        easing: (t) => t,
         useNativeDriver: true,
       })
     ).start();
@@ -54,13 +54,13 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
         Animated.timing(pulseAnim, {
           toValue: 1.1,
           duration: 1500,
-          easing: Easing.inOut(Easing.sine),
+          easing: (t) => t,
           useNativeDriver: true,
         }),
         Animated.timing(pulseAnim, {
           toValue: 1,
           duration: 1500,
-          easing: Easing.inOut(Easing.sine),
+          easing: (t) => t,
           useNativeDriver: true,
         }),
       ])
@@ -86,7 +86,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
   });
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} collapsable={true}>
       <LinearGradient
         colors={['#0F172A', '#1E293B', '#8B1538']}
         style={styles.gradient}
