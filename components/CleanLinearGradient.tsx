@@ -7,7 +7,7 @@ interface CleanLinearGradientProps extends Omit<LinearGradientProps, 'collapsabl
 
 // This component forwards all props to LinearGradient EXCEPT for 'collapsable'
 export const CleanLinearGradient = React.forwardRef<View, CleanLinearGradientProps>(
-  ({ ...rest }, ref) => {
+  ({ collapsable, ...rest }, ref) => {
     return <LinearGradient {...rest} />;
   }
 );

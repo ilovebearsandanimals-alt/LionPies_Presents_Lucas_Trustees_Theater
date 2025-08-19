@@ -6,7 +6,7 @@ interface CleanSvgProps extends Omit<SvgProps, 'collapsable'> {}
 
 // This component forwards all props to Svg EXCEPT for 'collapsable'
 export const CleanSvg = React.forwardRef<Svg, CleanSvgProps>(
-  ({ ...rest }, ref) => {
+  ({ collapsable, ...rest }, ref) => {
     return <Svg {...rest} ref={ref} />;
   }
 );

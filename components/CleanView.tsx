@@ -7,7 +7,7 @@ interface CleanViewProps extends Omit<ViewProps, 'collapsable'> {}
 // This component takes all props, but specifically ignores 'collapsable'
 // by not passing it down in the {...rest} spread.
 export const CleanView = React.forwardRef<View, CleanViewProps>(
-  ({ ...rest }, ref) => {
+  ({ collapsable, ...rest }, ref) => {
     return <View {...rest} ref={ref} />;
   }
 );

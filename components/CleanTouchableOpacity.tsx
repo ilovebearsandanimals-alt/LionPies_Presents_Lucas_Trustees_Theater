@@ -6,7 +6,7 @@ interface CleanTouchableOpacityProps extends Omit<TouchableOpacityProps, 'collap
 
 // This component forwards all props to TouchableOpacity EXCEPT for 'collapsable'
 export const CleanTouchableOpacity = React.forwardRef<TouchableOpacity, CleanTouchableOpacityProps>(
-  ({ ...rest }, ref) => {
+  ({ collapsable, ...rest }, ref) => {
     return <TouchableOpacity {...rest} ref={ref} />;
   }
 );
