@@ -9,12 +9,12 @@ import {
   TextInput,
   Platform,
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { Search, Filter, ChevronRight, Clock, Star } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
 import { CleanScrollView } from '@/components/CleanScrollView';
 import { CleanTouchableOpacity } from '@/components/CleanTouchableOpacity';
+import { CleanLinearGradient } from '@/components/CleanLinearGradient';
 
 interface Movie {
   id: string;
@@ -73,7 +73,7 @@ export default function MoviesScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <CleanView style={{ flex: 1 }}>
-      <LinearGradient
+      <CleanLinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
         start={{ x: 0, y: 0 }}
@@ -81,7 +81,7 @@ export default function MoviesScreen() {
       >
         <Text style={styles.headerTitle}>Trustees & Lucas Theatres</Text>
         <Text style={styles.headerSubtitle}>Discover Cinema</Text>
-      </LinearGradient>
+      </CleanLinearGradient>
 
       <CleanScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <CleanScrollView 
@@ -114,7 +114,7 @@ export default function MoviesScreen() {
             <CleanTouchableOpacity key={movie.id} style={styles.movieCard}>
               <View style={styles.moviePoster}>
                 <Image source={{ uri: movie.poster }} style={styles.posterImage} />
-                <LinearGradient
+                <CleanLinearGradient
                   colors={['transparent', 'rgba(0,0,0,0.8)']}
                   style={styles.posterOverlay}
                 />

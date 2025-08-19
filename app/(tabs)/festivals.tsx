@@ -8,12 +8,12 @@ import {
   Image,
   Platform,
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { Calendar, MapPin, Users, Award, ExternalLink } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
 import { CleanScrollView } from '@/components/CleanScrollView';
 import { CleanTouchableOpacity } from '@/components/CleanTouchableOpacity';
+import { CleanLinearGradient } from '@/components/CleanLinearGradient';
 
 interface Festival {
   id: string;
@@ -81,7 +81,7 @@ export default function FestivalsScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <CleanView style={{ flex: 1 }}>
-      <LinearGradient
+      <CleanLinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
         start={{ x: 0, y: 0 }}
@@ -89,7 +89,7 @@ export default function FestivalsScreen() {
       >
         <Text style={styles.headerTitle}>Festivals & Events</Text>
         <Text style={styles.headerSubtitle}>Celebrate cinema with us</Text>
-      </LinearGradient>
+      </CleanLinearGradient>
 
       <CleanScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.festivalsContainer}>
@@ -97,7 +97,7 @@ export default function FestivalsScreen() {
             <CleanTouchableOpacity key={festival.id} style={styles.festivalCard}>
               <View style={styles.festivalImageContainer}>
                 <Image source={{ uri: festival.image }} style={styles.festivalImage} />
-                <LinearGradient
+                <CleanLinearGradient
                   colors={['transparent', 'rgba(0,0,0,0.7)']}
                   style={styles.imageOverlay}
                 />

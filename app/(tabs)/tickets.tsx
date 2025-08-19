@@ -7,12 +7,12 @@ import {
   TouchableOpacity,
   Platform,
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { Ticket, Calendar, MapPin, Clock, QrCode, Download } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
 import { CleanScrollView } from '@/components/CleanScrollView';
 import { CleanTouchableOpacity } from '@/components/CleanTouchableOpacity';
+import { CleanLinearGradient } from '@/components/CleanLinearGradient';
 
 interface TicketBooking {
   id: string;
@@ -87,7 +87,7 @@ export default function TicketsScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <CleanView style={{ flex: 1 }}>
-      <LinearGradient
+      <CleanLinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
         start={{ x: 0, y: 0 }}
@@ -95,7 +95,7 @@ export default function TicketsScreen() {
       >
         <Text style={styles.headerTitle}>My Tickets</Text>
         <Text style={styles.headerSubtitle}>Your movie reservations</Text>
-      </LinearGradient>
+      </CleanLinearGradient>
 
       <View style={styles.tabsContainer}>
         {tabs.map((tab) => (
@@ -121,7 +121,7 @@ export default function TicketsScreen() {
         <View style={styles.ticketsContainer}>
           {mockTickets.map((ticket) => (
             <View key={ticket.id} style={styles.ticketCard}>
-              <LinearGradient
+              <CleanLinearGradient
                 colors={['#8B1538', '#DC2626']}
                 style={styles.ticketHeader}
                 start={{ x: 0, y: 0 }}
@@ -139,7 +139,7 @@ export default function TicketsScreen() {
                     <Text style={styles.statusText}>{getStatusText(ticket.status)}</Text>
                   </View>
                 </View>
-              </LinearGradient>
+              </CleanLinearGradient>
 
               <View style={styles.ticketBody}>
                 <View style={styles.ticketDetails}>

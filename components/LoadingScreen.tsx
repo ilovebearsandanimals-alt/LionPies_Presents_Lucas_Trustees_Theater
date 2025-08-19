@@ -6,8 +6,8 @@ import {
   Animated,
   Easing,
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import Svg, { Path, Circle } from 'react-native-svg';
+import { CleanLinearGradient } from '@/components/CleanLinearGradient';
 
 interface LoadingScreenProps {
   onLoadingComplete?: () => void;
@@ -87,7 +87,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
 
   return (
     <View style={styles.container}>
-      <LinearGradient
+      <CleanLinearGradient
         colors={['#0F172A', '#1E293B', '#8B1538']}
         style={styles.gradient}
         start={{ x: 0, y: 0 }}
@@ -167,7 +167,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
             <Animated.View style={[styles.dot, { opacity: pulseAnim }]} />
           </View>
         </Animated.View>
-      </LinearGradient>
+      </CleanLinearGradient>
     </View>
   );
 }

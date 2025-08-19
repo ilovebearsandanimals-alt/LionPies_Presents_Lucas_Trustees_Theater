@@ -7,12 +7,12 @@ import {
   TouchableOpacity,
   Platform,
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { MapPin, Clock, ChevronRight, Calendar } from 'lucide-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
 import { CleanScrollView } from '@/components/CleanScrollView';
 import { CleanTouchableOpacity } from '@/components/CleanTouchableOpacity';
+import { CleanLinearGradient } from '@/components/CleanLinearGradient';
 
 interface Showtime {
   id: string;
@@ -61,7 +61,7 @@ export default function ShowtimesScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <CleanView style={{ flex: 1 }}>
-      <LinearGradient
+      <CleanLinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
         start={{ x: 0, y: 0 }}
@@ -69,7 +69,7 @@ export default function ShowtimesScreen() {
       >
         <Text style={styles.headerTitle}>Showtimes</Text>
         <Text style={styles.headerSubtitle}>Plan your perfect movie night</Text>
-      </LinearGradient>
+      </CleanLinearGradient>
 
       <CleanScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <CleanScrollView 

@@ -8,7 +8,6 @@ import {
   Platform,
   Switch,
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { 
   User, 
   Bell, 
@@ -25,6 +24,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { CleanView } from '@/components/CleanView';
 import { CleanScrollView } from '@/components/CleanScrollView';
 import { CleanTouchableOpacity } from '@/components/CleanTouchableOpacity';
+import { CleanLinearGradient } from '@/components/CleanLinearGradient';
 
 export default function ProfileScreen() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
@@ -39,7 +39,7 @@ export default function ProfileScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <CleanView style={{ flex: 1 }}>
-      <LinearGradient
+      <CleanLinearGradient
         colors={['#8B1538', '#1E293B']}
         style={styles.header}
         start={{ x: 0, y: 0 }}
@@ -47,12 +47,12 @@ export default function ProfileScreen() {
       >
         <View style={styles.profileSection}>
           <View style={styles.avatarContainer}>
-            <LinearGradient
+            <CleanLinearGradient
               colors={['#F59E0B', '#EAB308']}
               style={styles.avatar}
             >
               <User size={32} color="#FFFFFF" strokeWidth={2} />
-            </LinearGradient>
+            </CleanLinearGradient>
           </View>
           <Text style={styles.userName}>Alex Thompson</Text>
           <Text style={styles.userEmail}>alex.thompson@email.com</Text>
@@ -61,7 +61,7 @@ export default function ProfileScreen() {
             <Text style={styles.membershipText}>Premium Member</Text>
           </View>
         </View>
-      </LinearGradient>
+      </CleanLinearGradient>
 
       <CleanScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.userInfoCard}>
