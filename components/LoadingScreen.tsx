@@ -8,12 +8,13 @@ import {
 } from 'react-native';
 import Svg, { Path, Circle } from 'react-native-svg';
 import { CleanLinearGradient } from '@/components/CleanLinearGradient';
+import { CleanSvg } from '@/components/CleanSvg';
 
 interface LoadingScreenProps {
   onLoadingComplete?: () => void;
 }
 
-const AnimatedSvg = Animated.createAnimatedComponent(Svg);
+const AnimatedSvg = Animated.createAnimatedComponent(CleanSvg);
 
 export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
   const fadeAnim = useRef(new Animated.Value(0)).current;
